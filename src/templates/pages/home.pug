@@ -1,0 +1,18 @@
+extends ../layouts/base.pug
+
+block styles
+    <link rel="stylesheet" href="static/styles/home.css">
+
+block content
+    <a href="/" title="#{siteName}">
+        <h1 class="title">#{siteName}</h1>
+    </a>
+
+    <a href="#{githubRepo}" class="github" target="_blank" title="GitHub repository">
+        <img src="#{imagesPath}/github-logo.svg">
+    </a>
+
+    <div class="content">
+        <img class="logo" src="#{imagesPath}/puzzle-logo.svg">
+        <a class="description" href="#{githubRepo}" target="_blank" title="GitHub repository">#{siteDescription}</a>
+    </div>
