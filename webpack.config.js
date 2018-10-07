@@ -3,7 +3,7 @@ const minPrefix = isProd ? '.min' : '';
 
 const path = require('path');
 
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const CssNano = require('cssnano');
 
@@ -90,11 +90,14 @@ module.exports = {
 		]
 	},
 	optimization : !isProd ? {} : {
-		minimizer: [
-			new UglifyJsPlugin({
-				uglifyOptions: {
+		minimize  : true,
+		minimizer : [
+			new TerserPlugin({
+				terserOptions: {
+					compress: true,
 					output: {
-						comments: false
+						comments: false,
+						beautify: false
 					}
 				}
 			})
