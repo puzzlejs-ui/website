@@ -65,7 +65,7 @@ module.exports = {
 				use  : htmlExtractTextPlugin.extract({
 					use : [
 						{loader : 'html-loader', options : {interpolate : true}},
-						{loader : 'pug-html-loader', options : {data : {isProd : isProd}}}
+						{loader : 'pug-html-loader', options : {data : {isProd : isProd, version: Date.now()}}}
 					]
 				})
 			}, {

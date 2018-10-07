@@ -57,7 +57,8 @@ a {
   width: 100%;
   padding: 10px;
   background: #f6f6f6 url(/static/assets/bg.svg) repeat;
-  background-size: 8px; }
+  background-size: 8px;
+  z-index: 999; }
   .common-header__github img {
     width: 32px;
     height: 32px; }

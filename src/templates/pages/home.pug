@@ -1,10 +1,10 @@
 extends ../layouts/base.pug
 
 block styles
-    <link rel="stylesheet" href="/static/styles/home#{minPrefix}.css">
+    <link rel="stylesheet" href="/static/styles/home#{minPrefix}.css?v=#{version}">
 
 block scripts
-    <script src="/static/scripts/home#{minPrefix}.js"></script>
+    <script src="/static/scripts/home#{minPrefix}.js?v=#{version}"></script>
 
 block content
     <div class="page-home">

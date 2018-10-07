@@ -1,10 +1,10 @@
 extends ../layouts/base.pug
 
 block styles
-    <link rel="stylesheet" href="/static/styles/404#{minPrefix}.css">
+    <link rel="stylesheet" href="/static/styles/404#{minPrefix}.css?v=#{version}">
 
 block scripts
-    <script src="/static/scripts/404#{minPrefix}.js"></script>
+    <script src="/static/scripts/404#{minPrefix}.js?v=#{version}"></script>
 
 block content
     <div class="page-404">

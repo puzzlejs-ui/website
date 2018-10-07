@@ -34,6 +34,7 @@ a {
         padding: 10px;
         background: #f6f6f6 url(../../assets/images/bg.svg) repeat;
         background-size: 8px;
+        z-index: 999;
 
         &__github {
             img {
