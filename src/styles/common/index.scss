@@ -69,8 +69,15 @@ a {
 
         &:after {
             content: '→';
+            position: relative;
             color: $blue;
             margin-left: 15px;
+        }
+
+        &:hover {
+            &:after {
+                right: -5px;
+            }
         }
     }
 

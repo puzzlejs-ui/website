@@ -82,8 +82,11 @@ a {
   background: #eee; }
   .common-button:after {
     content: '\2192';
+    position: relative;
     color: #36a6f8;
     margin-left: 15px; }
+  .common-button:hover:after {
+    right: -5px; }
 
 .common-blockquote {
   width: 100%;

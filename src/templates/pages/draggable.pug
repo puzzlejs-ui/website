@@ -1,5 +1,8 @@
 extends ../layouts/base.pug
 
+block title
+    <title>#{siteName} - Draggable component usage example</title>
+
 block styles
     <link rel="stylesheet" href="/static/styles/draggable.css?v=#{version}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/styles/monokai-sublime.min.css">
@@ -10,21 +13,29 @@ block scripts
 
 block content
     <div class="page-draggable">
-        <pre class="page-draggable__code language-javascript">
-            <code id="code" class="js">
-                | import React from 'react';
-                | import {Dragable} from '@puzzlejs/react-ui';
-                | // or 
-                | // import Dragable from '@puzzlejs/react-ui/draggable';
-                |
-                | const App = () => (
-                |   &lt;Dragable&gt;
-                |       &lt;div&gt;You can drag me!&lt;/div&gt;
-                |   &lt;/Dragable&gt;
-                |);
-                |
-                | export default App;
-            </code>
-        </pre>
+        //- <pre class="page-draggable__code language-javascript">
+        //-     <code id="code" class="js">
+        //-         | import React from 'react';
+        //-         | import {Dragable} from '@puzzlejs/react-ui';
+        //-         | // or 
+        //-         | // import Dragable from '@puzzlejs/react-ui/draggable';
+        //-         |
+        //-         | const App = () => (
+        //-         |   &lt;Dragable
+        //-         |       axix="x"
+        //-         |       containment="parent"
+        //-         |       handle=".handle"
+        //-         |       grid=[20, 20]&gt;
+        //-         |       &lt;div&gt;
+        //-         |           &lt;div className=".handle"&gt;drag me&lt;/div&gt;
+        //-         |           You must click my handle to drag me
+        //-         |       &lt;/div&gt;
+        //-         |   &lt;/Dragable&gt;
+        //-         |);
+        //-         |
+        //-         | export default App;
+        //-     </code>
+        //- </pre>
+        <script async src="//jsfiddle.net/muzikant/2wpa7dLv/embed/js/"></script>
     </div>
     

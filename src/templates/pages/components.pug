@@ -1,11 +1,13 @@
 extends ../layouts/base.pug
 
+block title
+    <title>#{siteName} - Installation guide</title>
+
 block styles
     <link rel="stylesheet" href="/static/styles/components.css?v=#{version}">
 
 block scripts
     <script src="/static/scripts/components#{minPrefix}.js?v=#{version}"></script>
-
 
 block content
     - var installCMD = "npm install @puzzlejs/react --save"
