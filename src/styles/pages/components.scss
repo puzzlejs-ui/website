@@ -1,8 +1,9 @@
+@import '../vars';
 @import '../colors';
 
 .page-components {
     padding: 20px;
-    max-width: 500px;
+    width: $page-width;
     margin: 0 auto;
 
     &__headding {

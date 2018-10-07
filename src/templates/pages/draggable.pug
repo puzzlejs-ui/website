@@ -2,5 +2,29 @@ extends ../layouts/base.pug
 
 block styles
     <link rel="stylesheet" href="/static/styles/draggable.css?v=#{version}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/styles/monokai-sublime.min.css">
+
+block scripts
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/highlight.min.js"></script>
+    <script src="/static/scripts/draggable#{minPrefix}.js?v=#{version}"></script>
 
 block content
+    <div class="page-draggable">
+        <pre class="page-draggable__code language-javascript">
+            <code id="code" class="js">
+                | import React from 'react';
+                | import {Dragable} from '@puzzlejs/react-ui';
+                | // or 
+                | // import Dragable from '@puzzlejs/react-ui/draggable';
+                |
+                | const App = () => (
+                |   &lt;Dragable&gt;
+                |       &lt;div&gt;You can drag me!&lt;/div&gt;
+                |   &lt;/Dragable&gt;
+                |);
+                |
+                | export default App;
+            </code>
+        </pre>
+    </div>
+    
