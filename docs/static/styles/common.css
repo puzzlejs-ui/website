@@ -45,4 +45,28 @@ a {
   color: #333;
   text-decoration: none; }
 
+* {
+  box-sizing: border-box; }
+
+.common-header {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 52px;
+  width: 100%;
+  padding: 10px;
+  background: #f6f6f6 url(/static/assets/bg.svg) repeat;
+  background-size: 8px; }
+  .common-header__github img {
+    width: 32px;
+    height: 32px; }
+  .common-header__title {
+    font-weight: 100;
+    font-size: 16px; }
+
+.common-content {
+  padding-top: 52px;
+  height: 100%; }
+
 /*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzdGF0aWMvc3R5bGVzL2NvbW1vbi5jc3MiLCJzb3VyY2VSb290IjoiIn0=*/

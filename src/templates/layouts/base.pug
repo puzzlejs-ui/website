@@ -4,7 +4,12 @@
         include ../includes/head.pug
     </head>
     <body>
-        block content
+        include ../includes/header.pug
+        
+        <div class="common-content">
+            block content
+        </div>
+        
         include ../includes/scripts.pug
     </body>
 </html>

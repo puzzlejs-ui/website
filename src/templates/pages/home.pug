@@ -7,15 +7,7 @@ block scripts
     <script src="/static/scripts/home#{minPrefix}.js"></script>
 
 block content
-    <a href="/" title="#{siteName}">
-        <h1 class="title">#{siteName}</h1>
-    </a>
-
-    <a href="#{githubRepo}" class="github" target="_blank" title="GitHub repository">
-        <img src="#{imagesPath}/github-logo.svg">
-    </a>
-
-    <div class="content">
-        <img class="logo" src="#{imagesPath}/puzzle-logo.svg">
-        <a class="description" href="#{githubRepo}" target="_blank" title="GitHub repository">#{siteDescription}</a>
+    <div class="page-home">
+        <img class="page-home__logo" src="#{imagesPath}/puzzle-logo.svg">
+        <a class="page-home__description" href="#{githubRepo}" target="_blank" title="GitHub repository">#{siteDescription}</a>
     </div>
