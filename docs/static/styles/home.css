@@ -1,8 +1,6 @@
 .page-home {
-  position: relative;
   display: flex;
   padding: 0 20px;
-  top: -52px;
   height: 100%;
   width: 100%;
   box-sizing: border-box;
@@ -13,12 +11,18 @@
   .page-home__logo {
     width: 50%;
     min-width: 280px;
-    height: auto; }
-  .page-home__description {
-    text-align: center;
-    margin: 15px 0 0 0;
-    padding: 8px 16px;
-    border-radius: 20px;
-    background: #eee; }
+    height: auto;
+    margin-top: -40px;
+    margin-bottom: 40px; }
+  .page-home__github {
+    position: absolute;
+    bottom: 20px;
+    right: 20px; }
+    .page-home__github img {
+      width: 32px;
+      height: 32px; }
+  .page-home__title {
+    font-weight: 100;
+    font-size: 16px; }
 
 /*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzdGF0aWMvc3R5bGVzL2hvbWUuY3NzIiwic291cmNlUm9vdCI6IiJ9*/

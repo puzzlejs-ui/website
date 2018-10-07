@@ -5,7 +5,7 @@
 body, html {
     font-family: 'Roboto', sans-serif;
     height: 100%;
-    color: #333;
+    color: #444;
     padding: 0;
     margin: 0;
     font-weight: 100;
@@ -15,7 +15,7 @@ body, html {
 }
 
 a {
-    color: #333;
+    color: $blue;
     text-decoration: none;
 }
 
@@ -23,34 +23,62 @@ a {
     box-sizing: border-box;
 }
 
+.layout {
+    &-no-header {
+        .common {
+            &-content {
+                padding-top: 0;
+            }
+        }
+    }
+}
+
 .common {
     &-header {
         position: fixed;
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
-        height: 52px;
+        height: $header-height;
         width: 100%;
-        padding: 10px;
+        padding: 10px 20px;
         background: #f6f6f6 url(../../assets/images/bg.svg) repeat;
         background-size: 8px;
         z-index: 999;
 
-        &__github {
-            img {
-                width: 32px;
-                height: 32px;
-            }
-        } 
-
-        &__title {
-            font-weight: 100;
-            font-size: 16px;
+        &__logo {
+            height: 20px;
+            width: 90px;
+            background-image: url(../../assets/images/puzzle-logo.svg);
+            color: transparent;
         }
     }
 
     &-content {
         padding-top: $header-height;
         height: 100%;
+    }
+
+    &-button {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 8px 16px;
+        border-radius: 20px;
+        background: $gray;
+
+        &:after {
+            content: '→';
+            color: $blue;
+            margin-left: 15px;
+        }
+    }
+
+    &-blockquote {
+        width: 100%;
+        background-color: $gray;
+        border-left: 3px solid $blue;
+        padding: 20px;
+        display: block;
     }
 }

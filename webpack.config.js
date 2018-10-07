@@ -15,8 +15,9 @@ const htmlExtractTextPlugin = new ExtractTextPlugin({
 	filename : (getPath) => {
 		const name = getPath('[name]')
 		const paths = {
-			'home'      : 'index.html',
-			'draggable' : 'components/draggable/index.html'
+			'home'       : 'index.html',
+			'components' : 'installation/index.html',
+			'draggable'  : 'components/draggable/index.html'
 		};
 		return (paths[name] || name + '.html');
 	}
@@ -27,6 +28,7 @@ module.exports = {
 		/* Pages */
 		'home'       : path.resolve(__dirname, 'src/scripts/pages/home.js'),
 		'404'        : path.resolve(__dirname, 'src/scripts/pages/404.js'),
+		'components' : path.resolve(__dirname, 'src/scripts/pages/components.js'),
 		'draggable'  : path.resolve(__dirname, 'src/scripts/pages/draggable.js'),
 		/* Common */
 		'common' : path.resolve(__dirname, 'src/scripts/common/index.js')

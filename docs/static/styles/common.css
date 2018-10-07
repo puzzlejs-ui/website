@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
@@ -33,7 +34,7 @@ table {
 body, html {
   font-family: 'Roboto', sans-serif;
   height: 100%;
-  color: #333;
+  color: #444;
   padding: 0;
   margin: 0;
   font-weight: 100;
@@ -42,32 +43,53 @@ body, html {
   line-height: 1.3; }
 
 a {
-  color: #333;
+  color: #36a6f8;
   text-decoration: none; }
 
 * {
   box-sizing: border-box; }
 
+.layout-no-header .common-content {
+  padding-top: 0; }
+
 .common-header {
   position: fixed;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  height: 52px;
+  height: 40px;
   width: 100%;
-  padding: 10px;
+  padding: 10px 20px;
   background: #f6f6f6 url(/static/assets/bg.svg) repeat;
   background-size: 8px;
   z-index: 999; }
-  .common-header__github img {
-    width: 32px;
-    height: 32px; }
-  .common-header__title {
-    font-weight: 100;
-    font-size: 16px; }
+  .common-header__logo {
+    height: 20px;
+    width: 90px;
+    background-image: url(/static/assets/puzzle-logo.svg);
+    color: transparent; }
 
 .common-content {
-  padding-top: 52px;
+  padding-top: 40px;
   height: 100%; }
+
+.common-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 16px;
+  border-radius: 20px;
+  background: #eee; }
+  .common-button:after {
+    content: '\2192';
+    color: #36a6f8;
+    margin-left: 15px; }
+
+.common-blockquote {
+  width: 100%;
+  background-color: #eee;
+  border-left: 3px solid #36a6f8;
+  padding: 20px;
+  display: block; }
 
 /*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzdGF0aWMvc3R5bGVzL2NvbW1vbi5jc3MiLCJzb3VyY2VSb290IjoiIn0=*/
