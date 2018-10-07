@@ -1,8 +1,14 @@
 - var siteName        = "Puzzle.js"
 - var siteDescription = "Open source React UI library"
-- var siteUrl         = "https://www.puzzlejs.com"
 - var githubRepo      = "https://github.com/puzzlejs-ui/react"
 - var assetsPath      = "../../assets"
 - var imagesPath      = "../../assets/images"
 - var scriptsPath     = "../../scripts"
 - var stylesPath      = "../../styles"
+
+if isProd
+    - var minPrefix = ".min"
+    - var siteUrl   = "https://www.puzzlejs.com"
+else
+    - var minPrefix = ""
+    - var siteUrl   = "http://127.0.0.1:8080"

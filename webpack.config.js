@@ -1,31 +1,39 @@
 const isProd = process.env.NODE_ENV === 'production';
+const minPrefix = isProd ? '.min' : '';
 
 const path = require('path');
 
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const CssNano = require('cssnano');
 
 const cssExtractTextPlugin = new ExtractTextPlugin({
-	filename :  'static/styles/[name].css'
+	filename :  'static/styles/[name]' + minPrefix + '.css'
 });
 
 const htmlExtractTextPlugin = new ExtractTextPlugin({
-	filename:  (getPath) => {
-		return getPath('[name].html').replace('home.html', 'index.html');
-	},
+	filename : (getPath) => {
+		const name = getPath('[name]')
+		const paths = {
+			'home'      : 'index.html',
+			'draggable' : 'components/draggable/index.html'
+		};
+		return (paths[name] || name + '.html');
+	}
 });
 
 module.exports = {
 	entry     : {
 		/* Pages */
-		'home' : path.resolve(__dirname, 'src/scripts/pages/home.js'),
-		'docs' : path.resolve(__dirname, 'src/scripts/pages/docs.js'),
+		'home'       : path.resolve(__dirname, 'src/scripts/pages/home.js'),
+		'404'        : path.resolve(__dirname, 'src/scripts/pages/404.js'),
+		'draggable'  : path.resolve(__dirname, 'src/scripts/pages/draggable.js'),
 		/* Common */
 		'common' : path.resolve(__dirname, 'src/scripts/common/index.js')
 	},
 	output    : {
 		path     : path.resolve(__dirname, 'docs/'),
-		filename : 'static/scripts/[name].js'
+		filename : 'static/scripts/[name]' + minPrefix + '.js'
 	},
 	resolve   : {
 		alias     : {
@@ -40,12 +48,25 @@ module.exports = {
 				test : /\.scss$/,
 				use  : cssExtractTextPlugin.extract({
 					fallback : 'style-loader',
-					use      : ['css-loader', 'sass-loader']	
+					use : [
+						{loader : 'css-loader'},
+						{loader : 'postcss-loader',
+							options: {
+								plugins : !isProd ? [] : [
+									CssNano({ autoprefixer : true, safe : true })
+								]
+							}
+						},
+						{loader : 'sass-loader'}
+					]
 				})
 			}, {
 				test : /\.pug$/,
 				use  : htmlExtractTextPlugin.extract({
-					use : ['html-loader?interpolate', 'pug-html-loader']
+					use : [
+						{loader : 'html-loader', options : {interpolate : true}},
+						{loader : 'pug-html-loader', options : {data : {isProd : isProd}}}
+					]
 				})
 			}, {
 				test    : /\.js$/,
@@ -81,9 +102,9 @@ module.exports = {
 	},
 	plugins: [
 		cssExtractTextPlugin,
-		htmlExtractTextPlugin,
+		htmlExtractTextPlugin
 	],
 	mode      : process.env.NODE_ENV,
-    devtool   : isProd ? '' : 'source-map',
+    devtool   : isProd ? '' : 'inline-source-map',
 	profile   : true,
 };
