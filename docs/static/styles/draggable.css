@@ -1,3 +1,14 @@
+.page-draggable {
+  margin: 0 300px;
+  min-width: 320px;
+  padding: 0 20px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .page-draggable__code {
+    margin-top: -40px;
+    width: 100%; }
 /**
  * prism.js tomorrow night eighties for JavaScript, CoffeeScript, CSS and HTML
  * Based on https://github.com/chriskempson/tomorrow-theme
@@ -99,16 +110,5 @@ pre[class*="language-"] {
 
 .token.inserted {
   color: green; }
-.page-draggable {
-  margin: 0 300px;
-  min-width: 320px;
-  padding: 0 20px;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center; }
-  .page-draggable__code {
-    margin-top: -40px;
-    width: 100%; }
 
 /*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzdGF0aWMvc3R5bGVzL2RyYWdnYWJsZS5jc3MiLCJzb3VyY2VSb290IjoiIn0=*/
