@@ -10,16 +10,16 @@ block scripts
     <script src="/static/scripts/components#{minPrefix}.js?v=#{version}"></script>
 
 block content
-	- var package = "@puzzlejs/react-ui"
-    - var cmd = "npm i --save"
+    - var pack = "@puzzlejs/react-ui"
+    - var cmd = "npm i " + pack + " --save"
 
     <div class="page-components">
         <h2 class="page-components__headding">Installation</h2>
 
         <div class="page-components__description">Puzzle.js is available as an <a target="_blank" href="https://www.npmjs.com/package/#{package}">npm package</a>.</div>
         <div class="common-blockquote">
-            <span>$ #{cmd}#{package}</span>
-            <button class="page-components__copy" id="copy-install-cmd" value="#{cmd}#{package}">copy</button>
+            <span>$ #{cmd}</span>
+            <button class="page-components__copy" id="copy-install-cmd" value="#{cmd}">copy</button>
         </div>
 
         <h2 class="page-components__headding">Available components</h2>
