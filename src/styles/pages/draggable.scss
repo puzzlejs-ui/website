@@ -1,11 +1,16 @@
 @import '../vars';
 
 .page-draggable {
-    margin: 0 200px;
+    margin: 0 300px;
     min-width: 320px;
-    padding: 20px;
+    padding: 0 20px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     &__code {
-        border-radius: 4px;
+        margin-top: -$header-height;
+        width: 100%;
     }
 }

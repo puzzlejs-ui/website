@@ -1,9 +1,14 @@
 .page-draggable {
-  margin: 0 200px;
+  margin: 0 300px;
   min-width: 320px;
-  padding: 20px; }
+  padding: 0 20px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
   .page-draggable__code {
-    border-radius: 4px; }
+    margin-top: -40px;
+    width: 100%; }
 /**
  * prism.js tomorrow night eighties for JavaScript, CoffeeScript, CSS and HTML
  * Based on https://github.com/chriskempson/tomorrow-theme
